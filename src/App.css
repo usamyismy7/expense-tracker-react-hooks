@@ -1,38 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .App {
-  text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    font-family: 'Lato', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#balance {
+    margin-right: 220px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#income-expense {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    gap: 40px;
+    padding: 10px 70px;
+    margin: 20px 0px;
+    box-shadow: 2px 2px 2px 2px #ddd6d6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#green {
+    color: green;
 }
 
-.App-link {
-  color: #61dafb;
+#brown {
+    color: brown;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#history {
+    padding: 20px;
+}
+
+#history-h3 {
+    margin-right: 300px;
+}
+
+#transaction-h3 {
+    margin-right: 200px;
 }
