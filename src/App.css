@@ -43,3 +43,25 @@
 #transaction-h3 {
     margin-right: 200px;
 }
+
+#input {
+    width: 95%;
+    padding: 10px 7px;
+    border: 1px solid #ddd6d6;
+}
+
+#button {
+    cursor: pointer;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border: 1px solid #ddd6d6;
+    background-color: mediumslateblue;
+    color: whitesmoke;
+    border-radius: 3px;
+}
+
+#button:hover {
+    background-color: royalblue;
+    transition: 0.5s;
+}

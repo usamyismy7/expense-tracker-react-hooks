@@ -10,7 +10,11 @@ export function Transaction() {
             </div>
             <div>
                 <h4>Text</h4>
+            </div>
+            <div>
                 <input type="text" id="input" placeholder="Enter text..." />
+            </div>
+            <div>
                 <h4>Amount</h4>
                 <p>(negative-expense, positive-income)</p>
                 <input type="number" id="input" placeholder="Enter amount..." />
