@@ -1,17 +1,45 @@
+import { useContext } from 'react';
+import { GlobalContext } from './Context/GlobalState';
+
+//Money formatter function
+function moneyFormatter(num) {
+    let p = num.toFixed(2).split('.');
+    return (
+      '$ ' +
+      p[0]
+        .split('')
+        .reverse()
+        .reduce(function (acc, num, i, orig) {
+          return num === '-' ? acc : num + (i && !(i % 3) ? ',' : '') + acc;
+        }, '') +
+      '.' +
+      p[1]
+    );
+  }
+  
 
 export function IncomeExpense() {
-    const income = 0.00;
+    const { transactions } = useContext(GlobalContext);
+    const amounts = transactions.map(transaction => transaction.amount);
+
+    const income = amounts.filter(item => item > 0).reduce((acc, item) => (acc += item), 0);
+
+    const expense = (amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) * -1)
+    
     return(
         <div id="income-expense">
             <div>
-                <h3>INCOME</h3>
-                <h2 id="green">{"$"+income+".00"}</h2>
+                <h4>Income</h4>
+                <p className="money plus" id="green">{moneyFormatter(income)}</p>
             </div>
-            <hr></hr>
             <div>
-                <h3>EXPENSE</h3>
-                <h2 id="brown">{"$"+income+".00"}</h2>
+                <h4>Expense</h4>
+                <p className="money minus" id="brown">{moneyFormatter(expense)}</p>
             </div>
         </div>
     )
 }
+
+/*
+<hr></hr>
+*/

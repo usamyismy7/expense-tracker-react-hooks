@@ -3,7 +3,7 @@
 export function Header() {
     return(
         <div id="header">
-            <h1>Expense Tracker</h1>
+            <h2>Expense Tracker</h2>
         </div>
     )
 }
