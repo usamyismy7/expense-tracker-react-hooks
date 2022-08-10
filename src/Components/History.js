@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { History2 } from "./History2";
+import History2 from "./History2";
 
 import { GlobalContext } from './Context/GlobalState';
 

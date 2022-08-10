@@ -1,5 +1,5 @@
 import React from 'react';
-import { Balance } from './Components/Balance';
+import Balance from './Components/Balance';
 import { Header } from './Components/Header';
 import { History } from './Components/History';
 import { IncomeExpense } from './Components/IncomeExpense';

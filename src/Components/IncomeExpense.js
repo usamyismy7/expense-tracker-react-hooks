@@ -27,7 +27,7 @@ export function IncomeExpense() {
     const expense = (amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) * -1)
     
     return(
-        <div id="income-expense">
+        <div className="inc-exp-container" id="income-expense">
             <div>
                 <h4>Income</h4>
                 <p className="money plus" id="green">{moneyFormatter(income)}</p>
